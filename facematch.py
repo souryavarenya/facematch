@@ -22,18 +22,19 @@ from facepp import API
 api = API(API_KEY, API_SECRET)
 
 #assigning image with URL
+#not necessary in this program
 PERSONS = [
-    ('image1', 'http://trickster.site88.net/sou1.jpg'),
-    ('image2', 'http://trickster.site88.net/sou2.jpg'),
+    ('image1', '<URL1>'),
+    ('image2', '<URL2>'),
 ]
 
 #assigning face ids
 
-result = api.detection.detect(url = 'http://trickster.site88.net/sou1.jpg', mode = 'oneface')
+result = api.detection.detect(url = '<URL1>', mode = 'oneface')
 face_idone = result['face'][0]['face_id']
 print(face_idone)
 
-result2 = api.detection.detect(url = 'http://trickster.site88.net/dad.JPG', mode = 'oneface')
+result2 = api.detection.detect(url = '<URL2>', mode = 'oneface')
 face_idtwo = result2['face'][0]['face_id']
 print(face_idtwo)
 
